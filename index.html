@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | System Architect</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --neon-cyan: #00f3ff;
+            --neon-purple: #bc13fe;
+            --dark-bg: #050505;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: #e0e0e0;
+            font-family: 'Rajdhani', sans-serif;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, .font-tech {
+            font-family: 'Orbitron', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .neon-border {
+            border: 1px solid var(--neon-cyan);
+            box-shadow: 0 0 10px rgba(0, 243, 255, 0.3), inset 0 0 5px rgba(0, 243, 255, 0.2);
+        }
+
+        .neon-text-cyan { text-shadow: 0 0 8px var(--neon-cyan); color: var(--neon-cyan); }
+        .neon-text-purple { text-shadow: 0 0 8px var(--neon-purple); color: var(--neon-purple); }
+
+        .glass-card {
+            background: rgba(15, 15, 15, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .glass-card:hover {
+            border-color: var(--neon-purple);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(188, 19, 254, 0.2);
+        }
+
+        /* Scanline effect */
+        body::before {
+            content: " ";
+            display: block;
+            position: fixed;
+            top: 0; left: 0; bottom: 0; right: 0;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), 
+                        linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+            z-index: 9999;
+            background-size: 100% 4px, 3px 100%;
+            pointer-events: none;
+        }
+
+        .hero-glow {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: var(--neon-cyan);
+            filter: blur(120px);
+            opacity: 0.15;
+            border-radius: 50%;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body class="bg-black">
+
+    <nav class="fixed w-full z-50 px-6 py-4 flex justify-between items-center glass-card border-b border-cyan-900/30">
+        <div class="text-2xl font-bold font-tech neon-text-cyan">SYS_ARCH.EXE</div>
+        <div class="hidden md:flex space-x-8 text-sm font-tech">
+            <a href="#about" class="hover:text-cyan-400 transition">// SOBRE_MÍ</a>
+            <a href="#skills" class="hover:text-cyan-400 transition">// HABILIDADES</a>
+            <a href="#projects" class="hover:text-cyan-400 transition">// PROYECTOS</a>
+            <a href="#contact" class="hover:text-cyan-400 transition">// CONTACTO</a>
+        </div>
+    </nav>
+
+    <section class="min-h-screen flex flex-col justify-center items-center relative px-6">
+        <div class="hero-glow top-1/4 left-1/4"></div>
+        <div class="hero-glow bottom-1/4 right-1/4" style="background: var(--neon-purple);"></div>
+        
+        <div class="text-center">
+            <p class="text-cyan-400 font-tech mb-2 animate-pulse">> INICIALIZANDO INTERFAZ...</p>
+            <h1 class="text-6xl md:text-8xl font-bold mb-4 tracking-tighter">
+                FRONTEND <span class="neon-text-purple">DEVELOPER</span>
+            </h1>
+            <p class="text-xl text-gray-400 max-w-2xl mx-auto">
+                Especializado en crear experiencias digitales inmersivas de alto rendimiento y estética vanguardista.
+            </p>
+        </div>
+        
+        <div class="mt-12">
+            <a href="#projects" class="neon-border px-8 py-3 font-tech text-cyan-400 hover:bg-cyan-400 hover:text-black transition-all duration-300">
+                VER ARCHIVOS_PROYECTO
+            </a>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 px-6 max-w-6xl mx-auto">
+        <h2 class="text-3xl font-tech neon-text-cyan mb-12 flex items-center">
+            <span class="mr-4 text-gray-700">01.</span> SOBRE_MÍ
+        </h2>
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="glass-card p-8 rounded-lg border-l-4 border-cyan-500">
+                <p class="text-lg leading-relaxed mb-4">
+                    Soy un arquitecto de interfaces enfocado en la convergencia entre el diseño funcional y la tecnología de última generación. Mi enfoque se centra en el desarrollo de sistemas robustos, escalables y visualmente impactantes.
+                </p>
+                <p class="text-gray-400">
+                    Actualmente exploro la integración de IA en flujos de trabajo frontend y el desarrollo de arquitecturas modulares para aplicaciones web complejas.
+                </p>
+            </div>
+            <div class="relative">
+                <div class="w-full h-64 neon-border rounded-lg bg-[url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800')] bg-cover bg-center grayscale hover:grayscale-0 transition-all duration-500"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-20 bg-[#080808]">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-3xl font-tech neon-text-purple mb-12 flex items-center">
+                <span class="mr-4 text-gray-700">02.</span> HABILIDADES_CORE
+            </h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="p-6 glass-card text-center">
+                    <div class="text-cyan-400 text-4xl mb-4">JS</div>
+                    <h3 class="font-tech text-sm">JAVASCRIPT (ES6+)</h3>
+                </div>
+                <div class="p-6 glass-card text-center">
+                    <div class="text-cyan-400 text-4xl mb-4">⚛️</div>
+                    <h3 class="font-tech text-sm">REACT / NEXT.JS</h3>
+                </div>
+                <div class="p-6 glass-card text-center">
+                    <div class="text-cyan-400 text-4xl mb-4">🎨</div>
+                    <h3 class="font-tech text-sm">UI/UX DESIGN</h3>
+                </div>
+                <div class="p-6 glass-card text-center">
+                    <div class="text-cyan-400 text-4xl mb-4">🔥</div>
+                    <h3 class="font-tech text-sm">TAILWIND / SASS</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-20 px-6 max-w-6xl mx-auto">
+        <h2 class="text-3xl font-tech neon-text-cyan mb-12 flex items-center">
+            <span class="mr-4 text-gray-700">03.</span> DESPLIEGUES_RECIENTES
+        </h2>
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="glass-card overflow-hidden group">
+                <div class="h-48 bg-gray-800 relative">
+                    <img src="https://images.unsplash.com/photo-1614850523296-d8c1af93d400?auto=format&fit=crop&q=80&w=800" alt="Project" class="w-full h-full object-cover opacity-50 group-hover:opacity-80 transition">
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                        <button class="bg-cyan-500 text-black px-4 py-2 font-tech font-bold">DESPLEGAR</button>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-tech mb-2">NEON TETRIS ENGINE</h3>
+                    <p class="text-gray-400 text-sm mb-4">Arcade web desarrollado con Vanilla JS y lógica de matrices avanzada bajo estética cyberpunk.</p>
+                    <div class="flex gap-2 text-[10px] font-tech">
+                        <span class="px-2 py-1 border border-gray-700">HTML5</span>
+                        <span class="px-2 py-1 border border-gray-700">CANVAS</span>
+                        <span class="px-2 py-1 border border-gray-700">JS</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="glass-card overflow-hidden group">
+                <div class="h-48 bg-gray-800 relative">
+                    <img src="https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?auto=format&fit=crop&q=80&w=800" alt="Project" class="w-full h-full object-cover opacity-50 group-hover:opacity-80 transition">
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                        <button class="bg-purple-500 text-black px-4 py-2 font-tech font-bold">DESPLEGAR</button>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-tech mb-2">AUTO_VISTA PORTAL</h3>
+                    <h3 class="text-xl font-tech mb-2">AUTO_VISTA PORTAL</h3>
+                    <p class="text-gray-400 text-sm mb-4">Plataforma de gestión de vehículos con filtros dinámicos y arquitectura responsiva optimizada.</p>
+                    <div class="flex gap-2 text-[10px] font-tech">
+                        <span class="px-2 py-1 border border-gray-700">BOOTSTRAP</span>
+                        <span class="px-2 py-1 border border-gray-700">VERCEL</span>
+                        <span class="px-2 py-1 border border-gray-700">API</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 px-6 max-w-4xl mx-auto text-center">
+        <div class="neon-border p-12 glass-card relative overflow-hidden">
+            <div class="absolute top-0 right-0 p-4 font-tech text-[10px] text-cyan-800">ENCRYPTED_LINE_882</div>
+            <h2 class="text-4xl font-tech mb-6 neon-text-purple underline">ESTABLECER_CONEXIÓN</h2>
+            <p class="text-gray-400 mb-8">¿Tienes un proyecto que requiere una visión futurista? Mi terminal está siempre abierta.</p>
+            <a href="mailto:tu-email@dominio.com" class="text-2xl font-tech text-cyan-400 hover:neon-text-cyan transition-all">
+                ENVIAR_MENSAJE@HOST.LOCAL
+            </a>
+        </div>
+    </section>
+
+    <footer class="py-10 border-t border-gray-900 text-center text-gray-600 text-xs font-tech">
+        <p>&copy; 2026 // SYSTEM_DESIGN BY YODELIS // TODOS LOS DERECHOS RESERVADOS</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
